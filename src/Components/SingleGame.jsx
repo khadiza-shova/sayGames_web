@@ -3,6 +3,7 @@ import GameAll from '../../public/GamesAPI.json';
 import { CommentOutlined, LikeOutlined, ShareAltOutlined } from '@ant-design/icons';
 import { IoLogoGooglePlaystore } from 'react-icons/io5';
 import { BiLogoPlayStore } from 'react-icons/bi';
+import { CgPlayStopR } from 'react-icons/cg';
 
 
 
@@ -14,7 +15,7 @@ const SingleGame = () => {
 
     return (
         <>
-            <div className="grid grid-cols-6">
+            <div className="grid p-3 lg:p-0 lg:grid-cols-6">
                 <div className="firstGame col-span-4">
                     <div className="min-w-[60%] max-w-auto relative">
                         <div className="bg-white w-full h-[450px] object-cover rounded-3xl">
@@ -55,8 +56,7 @@ const SingleGame = () => {
                         <a href="https://play.google.com/store/apps/details?id=com.pd.vehiclemasters&referrer=adjust_reftag%3DcTGpVHp2Q3RGp%26utm_source%3DSayStore%26utm_campaign%3Dpage" target='_blank'>
                         <button
                             className="bg-transparent outline outline-yellow-50 text-white rounded-md py-2 px-3 flex items-center gap-[10px] text-[1rem] ">
-                            <img src="https://i.ibb.co/xFjCsGm/download-1-removebg-preview.png" alt="google logo"
-                                className="w-[23px]" />
+                           <CgPlayStopR></CgPlayStopR>
                           Play Store
                         </button>
                         </a>

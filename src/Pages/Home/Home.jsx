@@ -12,19 +12,19 @@ const Home = () => {
 
     return (
         <>
-            <div className="grid grid-cols-4">
-            <div className="firstGame col-span-3">
+            <div className="grid lg:grid-cols-4">
+            <div className="firstGame p-3 lg:p-0 lg:col-span-3">
                 <div className="min-w-[60%] max-w-auto relative">
                     <div className="bg-white w-full h-[450px] object-cover rounded-3xl">
                     </div>
                 </div>
             </div>
 
-            <div className="col-span-1 px-5 mt-5">
+            <div className="lg:col-span-1 px-5 mt-5">
                {
                 SliceData.map(game=>
                     <Link to={game.Game_name} key={game.id}>
-                      <div className='card_image rounded-md shadow-md relative '>
+                      <div className=' card_image rounded-md shadow-md relative '>
             <img src={game.Game_image} alt="image"
                 className="object-cover rounded-md" />
         

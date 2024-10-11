@@ -14,7 +14,7 @@ const ResponsiveNavbar = () => {
 
     return (
         <nav className="flex items-center justify-between max-w-5xl mx-auto relative p-3">
-           <Link to={'/'}> <img src={Logo} alt="logo" className="w-[120px] " /></Link>
+            <Link to={'/'}> <img src={Logo} alt="logo" className="w-[120px] " /></Link>
 
 
             <div className="flex items-center gap-[10px]">
@@ -29,12 +29,14 @@ const ResponsiveNavbar = () => {
             </div>
 
             <div>
+
               
-            <button
-                            className="bg-transparent outline outline-yellow-50 text-white rounded-md py-1 px-5 flex items-center gap-[10px] text-[0.9rem] ">
-                            <LogoutOutlined />
-                          Login
-                        </button>
+                    <button
+                        className="bg-transparent outline outline-yellow-50 text-white rounded-md py-1 px-5 flex items-center gap-[10px] text-[0.9rem] ">
+                        <LogoutOutlined />
+                        Login
+                    </button>
+               
             </div>
         </nav>
     );
