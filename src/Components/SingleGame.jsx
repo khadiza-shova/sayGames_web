@@ -10,7 +10,7 @@ const SingleGame = () => {
     const uniqueName = useParams();
 
     const singleGame = GameAll.find(game => game.Game_name === uniqueName.uniqueName);
-    const { Game_title,Rating,Game_features } = singleGame;
+    const { Game_title, Rating, Game_features } = singleGame;
 
     return (
         <>
@@ -46,46 +46,60 @@ const SingleGame = () => {
                             <h2 className='text-base'>About The Game</h2>
                             <p className='mt-2 text-xs'>{Game_features}</p>
                         </div>
-                        <div className='col-span-1 text-xl'>
+                        <div className='col-span-1 text-3xl'>
                             <h2>{Rating} Rating</h2>
                         </div>
                     </div>
-                    <button className='google_playBtn'>
-                      Google Play
-                    </button>
-                    <button className='google_playBtn'>
-                      App Store
-                    </button>
-                 
+                    <div className='mt-5 flex gap-4'>
+
+                        <a href="https://play.google.com/store/apps/details?id=com.pd.vehiclemasters&referrer=adjust_reftag%3DcTGpVHp2Q3RGp%26utm_source%3DSayStore%26utm_campaign%3Dpage" target='_blank'>
+                        <button
+                            className="bg-transparent outline outline-yellow-50 text-white rounded-md py-2 px-3 flex items-center gap-[10px] text-[1rem] ">
+                            <img src="https://i.ibb.co/xFjCsGm/download-1-removebg-preview.png" alt="google logo"
+                                className="w-[23px]" />
+                          Play Store
+                        </button>
+                        </a>
+                       
+                        <a href="https://apps.apple.com/us/app/vehicle-masters/id6444705312?mt=8" target='_blank'>
+                        <button
+                            className="bg-transparent outline outline-yellow-50 text-white rounded-md py-2 px-3 flex items-center gap-[10px] text-[1rem] ">
+                            <img src="https://i.ibb.co/xFjCsGm/download-1-removebg-preview.png" alt="google logo"
+                                className="w-[23px]" />
+                           App Store
+                        </button>
+                        </a>
+                       
+
+                     
+                    </div>
+
                 </div>
 
                 {/* More Game Section  */}
                 <div className="col-span-2 w-full px-3">
                     <h2 className='font-bold mt-2 text-xl'>More Game Like This</h2>
-                    
+
                     <div className='grid grid-cols-2 gap-2'>
 
                         {
-                            GameAll.map(Data =>
-                               <NavLink to={Data.Game_name} key={Data.id}>
-                                     <div key={Data.id}>
-                                    <img
-                                        src={Data.Game_image}
-                                        alt="image"
-                                        className="h-40 object-cover rounded-3xl mt-4"
-                                    />
-                                </div>
-                               </NavLink>
+                            GameAll.map(game =>
+                                <NavLink to={game.Game_name} key={game.id}>
+                                    <div className='more_card_image rounded-md shadow-md relative mt-5'>
+                                        <img src={game.Game_image} alt="image"
+                                            className="object-cover rounded-md" />
+                                    </div>
+                                </NavLink>
                             )
                         }
                     </div>
 
-                   
+
 
 
                 </div>
 
-               
+
             </div>
         </>
     );

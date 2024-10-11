@@ -16,7 +16,7 @@
         "Game_category":"arcade",
         "Game_image":"https://i.ibb.co.com/BsjzHwH/Hungry-Shark-Arena-512x340.jpg",
         "Rating":"4.5",
-        "Game_features":"lorem"
+        "Game_features":"loLorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, quisquam libero voluptate nostrum error aperiam ipsam perferendis iure omnis sunt accusamus, molestiae illo laboriosam explicabo dolorem tenetur, alias autem asperiores?rem"
     },
     {
         "id":3,
@@ -25,7 +25,7 @@
         "Game_category":"puzzle",
         "Game_image":"https://i.ibb.co.com/zbz9CdK/Rabbids-Volcano-Panic-512x340.jpg",
         "Rating":"4.5",
-        "Game_features":"lorem"
+        "Game_features":"loLorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, quisquam libero voluptate nostrum error aperiam ipsam perferendis iure omnis sunt accusamus, molestiae illo laboriosam explicabo dolorem tenetur, alias autem asperiores?rem"
     },
     {
         "id":4,

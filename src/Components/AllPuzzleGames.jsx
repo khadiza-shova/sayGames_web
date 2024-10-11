@@ -3,29 +3,25 @@ import AllGame from '../../public/GamesAPI.json';
 
 const AllPuzzleGames = () => {
 
-    const allPuzzleGames =AllGame.filter(game=> game.Game_category == "puzzle");
-    
+    const allPuzzleGames = AllGame.filter(game => game.Game_category == "puzzle");
+
 
     return (
-           <div className='flex gap-3 flex-wrap'>
-        {
-          allPuzzleGames.map(game=>
-            <NavLink to={game.Game_name} key={game.id}>
+        <div className='flex gap-x-4 gap-y-10 flex-wrap'>
+            {
+                allPuzzleGames.map(game =>
+                    <NavLink to={game.Game_name} key={game.id}>
+                        <div className='card_image rounded-md shadow-md relative w-32 h-40'>
+                            <img src={game.Game_image} alt="image"
+                                className="object-cover rounded-md" />
 
-                <div key={game.id} className="bg-white rounded-md shadow-md relative w-32 min-w-[50px]">
-            <img
-                src={game.Game_image}
-                alt="image"
-                className="w-full h-[130px] object-cover rounded-t-md"
-            />
-            <div className="p-2">
-                <h1 className="text-[14px] font-bold text-black leading-[24px] mt-1">{game.Game_title}</h1>
-            </div>
+                            <h2 className='poppins-regular '>{game.Game_title}</h2>
+
+                        </div>
+                    </NavLink>
+                )
+            }
         </div>
-            </NavLink>
-          )
-        }
-    </div>
     );
 };
 

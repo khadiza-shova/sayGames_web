@@ -20,17 +20,17 @@ const Home = () => {
                 </div>
             </div>
 
-            <div className="col-span-1 w-full h-[430px] px-3">
+            <div className="col-span-1 px-5 mt-5">
                {
-                SliceData.map(Data=>
-                    <Link to={Data.Game_name} key={Data.id}>
-                        <div key={Data.id}>
-                <img
-                        src={Data.Game_image}
-                        alt="image"
-                        className="h-40 w-full object-cover rounded-3xl mt-4"
-                    />
-                </div>
+                SliceData.map(game=>
+                    <Link to={game.Game_name} key={game.id}>
+                      <div className='card_image rounded-md shadow-md relative '>
+            <img src={game.Game_image} alt="image"
+                className="object-cover rounded-md" />
+        
+                <h2 className='poppins-regular '>{game.Game_title}</h2>
+
+        </div>
                     </Link>
                 )
                }
@@ -44,11 +44,11 @@ const Home = () => {
          
             <CardCom></CardCom>
 
-            <h2 className="text-xl my-4">New Games </h2>
+            <h2 className="text-xl font-bold mt-16 mb-5">New Games </h2>
             
             <NewGamesCard></NewGamesCard>
 
-            <h2 className="text-xl my-4">All Puzzle Games </h2> 
+            <h2 className="text-xl font-bold my-10">All Puzzle Games </h2> 
             
             <AllPuzzleGames></AllPuzzleGames>
         </div>
